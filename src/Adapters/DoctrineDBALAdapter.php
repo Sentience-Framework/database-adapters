@@ -13,9 +13,8 @@ use Sentience\DatabaseAdapters\Results\DoctrineDBALResult;
 
 class DoctrineDBALAdapter extends AdapterAbstract
 {
-    public function __construct(
-        protected Connection $connection,
-    ) {
+    public function __construct(protected Connection $connection)
+    {
     }
 
     public function version(): string

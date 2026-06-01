@@ -11,7 +11,6 @@ class LaravelResult extends ResultAbstract
 
     public function __construct(protected array $rows)
     {
-        $this->rows = $rows;
     }
 
     public function columns(): array

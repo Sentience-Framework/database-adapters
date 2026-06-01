@@ -12,9 +12,8 @@ use Sentience\DatabaseAdapters\Results\LaravelResult;
 
 class LaravelAdapter extends AdapterAbstract
 {
-    public function __construct(
-        protected Connection $connection,
-    ) {
+    public function __construct(protected Connection $connection)
+    {
     }
 
     public function version(): string
