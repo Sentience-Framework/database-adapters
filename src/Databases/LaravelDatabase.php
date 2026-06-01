@@ -26,6 +26,7 @@ class LaravelDatabase extends DatabaseAbstract
         $driver = $connection->getDriverName();
 
         $dialect = match ($driver) {
+            'mariadb' => new MySQLDialect(Driver::MARIADB, $adapter->version(), $options),
             'mysql' => new MySQLDialect(Driver::MYSQL, $adapter->version(), $options),
             'pgsql' => new PgSQLDialect(Driver::PGSQL, $adapter->version(), $options),
             'sqlite' => new SQLiteDialect(Driver::SQLITE, $adapter->version(), $options),
