@@ -14,6 +14,29 @@ class LaravelAdapter extends AdapterAbstract
 {
     public function __construct(protected Connection $connection)
     {
+        $pdo = $connection->getPdo();
+
+        foreach (['sqliteCreateFunction', 'createFunction'] as $method) {
+            if (method_exists($pdo, $method)) {
+                [$pdo, $method](
+                    static::REGEXP_FUNCTION,
+                    fn(string $value, string $pattern): bool => $this->regexpFunction(
+                        $value,
+                        $pattern
+                    ),
+                    2
+                );
+
+                [$pdo, $method](
+                    static::REGEXP_LIKE_FUNCTION,
+                    fn(string $value, string $pattern, string $flags = ''): bool => $this->regexpLikeFunction(
+                        $value,
+                        $pattern,
+                        $flags
+                    )
+                );
+            }
+        }
     }
 
     public function version(): string

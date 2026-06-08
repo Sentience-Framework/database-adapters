@@ -1264,16 +1264,16 @@
         },
         {
             "name": "sentience/database",
-            "version": "v2.17.0",
+            "version": "v2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sentience-Framework/database.git",
-                "reference": "68db9b7816673caa3f3c7f05888014c4de26ff9b"
+                "reference": "11d1816b170605ab38e750209ee97a2a53cb8248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sentience-Framework/database/zipball/68db9b7816673caa3f3c7f05888014c4de26ff9b",
-                "reference": "68db9b7816673caa3f3c7f05888014c4de26ff9b",
+                "url": "https://api.github.com/repos/Sentience-Framework/database/zipball/11d1816b170605ab38e750209ee97a2a53cb8248",
+                "reference": "11d1816b170605ab38e750209ee97a2a53cb8248",
                 "shasum": ""
             },
             "require": {
@@ -1289,9 +1289,9 @@
             "description": "The database connector for the Sentience framework",
             "support": {
                 "issues": "https://github.com/Sentience-Framework/database/issues",
-                "source": "https://github.com/Sentience-Framework/database/tree/v2.17.0"
+                "source": "https://github.com/Sentience-Framework/database/tree/v2.18.0"
             },
-            "time": "2026-05-18T18:37:23+00:00"
+            "time": "2026-06-06T17:09:22+00:00"
         },
         {
             "name": "symfony/clock",
