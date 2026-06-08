@@ -58,6 +58,10 @@ class LaravelAdapter extends AdapterAbstract
 
     public function queryWithParams(DialectInterface $dialect, QueryWithParams $queryWithParams, bool $emulatePrepare): ResultInterface
     {
+        if ($emulatePrepare) {
+            return $this->query($queryWithParams->toSql($dialect));
+        }
+
         $queryWithParams->namedParamsToQuestionMarks();
 
         $result = $this->connection->select(
